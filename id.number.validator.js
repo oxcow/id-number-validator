@@ -16,7 +16,7 @@ function getIdCardInfo(cardNo) {
 		isFemale : false // 是否为女性。默认false
 	};
 	
-	if (!cardNo && 15 != cardNo.length && 18 != cardNo.length) {
+	if (!cardNo || (15 != cardNo.length && 18 != cardNo.length) ) {
 		info.isTrue = false;
 		return info;
 	}
